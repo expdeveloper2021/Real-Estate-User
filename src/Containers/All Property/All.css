@@ -1,0 +1,129 @@
+.delete {
+    width: 80%;
+    height: auto;
+    background-color: white !important;
+    box-shadow: 3px 3px 6px 6px rgb(179, 177, 177);
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.delete h1 {
+    margin-bottom: 20px;
+}
+
+#myCarousel {
+    margin-top: 80px;
+    background-color: #edbcf7;
+}
+
+.main {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 50%;
+    margin: auto;
+    color: black;
+    text-align: left;
+    background-color: #dae0db;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.card p {
+    color: black;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.card button:hover {
+    opacity: 0.7;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    margin: 6px;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    margin-top: 30px;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: black transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 100% !important;
+    }
+    .delete {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .card {
+        width: 70%;
+    }
+    #uniq {
+        width: 30% !important;
+    }
+}
