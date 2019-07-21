@@ -61,11 +61,6 @@ class All extends Component {
             <div>
                 <NavBar />
                 <div id="myCarousel" className="carousel slide" data-ride="carousel">
-                    <ol className="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                    </ol>
                     <div className="carousel-inner" id="uniq" style={{ width: "20%", margin: "0px auto" }}>
                         <div className="item active">
                             <img src={contact} alt="Contact" />
