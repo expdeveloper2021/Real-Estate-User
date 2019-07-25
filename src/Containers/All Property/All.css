@@ -6,15 +6,19 @@
     padding: 20px;
     margin: 20px auto;
     text-align: center;
+    margin-top: 30px;
 }
 
 .delete h1 {
     margin-bottom: 20px;
 }
 
-#myCarousel {
+.uniq {
+    width: 100%;
+    height: 350px;
+    background-image: url("../../Images/slides.jpeg");
+    background-size: 100% 350px;
     margin-top: 80px;
-    background-color: #edbcf7;
 }
 
 .main {
@@ -58,6 +62,15 @@
 
 .card button:hover {
     opacity: 0.7;
+}
+
+.btn {
+    background-color: #ff7f07 !important;
+    border: 1px solid #ff7f07 !important;
+    float: right !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    width: 30% !important;
 }
 
 .lds-ring {
@@ -115,13 +128,17 @@
     .delete {
         width: 100% !important;
     }
+    .uniq {
+        height: 200px !important;
+        background-size: 100% 200px !important;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
     .card {
         width: 70%;
     }
-    #uniq {
-        width: 30% !important;
+    .btn {
+        width: 60% !important;
     }
 }

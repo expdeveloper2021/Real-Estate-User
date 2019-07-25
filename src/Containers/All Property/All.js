@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import NavBar from '../../Components/Navbar';
 import firebase from '../../Config/Fire'
 import './All.css'
-import contact from '../../Images/Contact.jpg'
-import contact2 from '../../Images/Contact2.jpg'
-import contact3 from '../../Images/Contact3.jpg'
+import logo from '../../Images/logo.jpeg'
 import Footer from '../Footer/Footer';
 
 class All extends Component {
@@ -15,7 +13,7 @@ class All extends Component {
             condit: false,
             active: "active",
             active1: "",
-            selected: "For Sale"
+            selected: "For Sale",
         }
     }
 
@@ -59,28 +57,8 @@ class All extends Component {
     render() {
         return (
             <div>
-                <NavBar />
-                <div id="myCarousel" className="carousel slide" data-ride="carousel">
-                    <div className="carousel-inner" id="uniq" style={{ width: "20%", margin: "0px auto" }}>
-                        <div className="item active">
-                            <img src={contact} alt="Contact" />
-                        </div>
-                        <div className="item">
-                            <img src={contact2} alt="Contact" />
-                        </div>
-                        <div className="item">
-                            <img src={contact3} alt="Contact" />
-                        </div>
-                    </div>
-                    <a className="left carousel-control" href="#myCarousel" data-slide="prev">
-                        <span className="glyphicon glyphicon-chevron-left"></span>
-                        <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="right carousel-control" href="#myCarousel" data-slide="next">
-                        <span className="glyphicon glyphicon-chevron-right"></span>
-                        <span className="sr-only">Next</span>
-                    </a>
-                </div>
+                <NavBar active="active" active1="" />
+                <div className="uniq"></div>
                 <div className="delete">
                     <h1>Properties</h1>
                     <ul className="nav nav-tabs">
@@ -95,11 +73,6 @@ class All extends Component {
                                     <h3><b>{f.title}</b></h3>
                                     <p style={{ marginLeft: "10px" }}>{f.address}</p>
                                     <div id={f.push} className="carousel slide" data-ride="carousel">
-                                        <ol className="carousel-indicators">
-                                            <li data-target={"#" + f.push} data-slide-to="0" className="active"></li>
-                                            <li data-target={"#" + f.push} data-slide-to="1"></li>
-                                            <li data-target={"#" + f.push} data-slide-to="2"></li>
-                                        </ol>
                                         <div className="carousel-inner">
                                             <div className="item active">
                                                 <img src={f.images[0]} alt="Los Angeles" style={{ width: "100%" }} />
@@ -125,7 +98,14 @@ class All extends Component {
                                     <p style={{ whiteSpace: "pre-line", marginLeft: "10px" }}>{f.detail}</p>
                                     <hr />
                                     <h4><b>Contact</b></h4>
-                                    <p style={{ marginLeft: "10px" }}>{f.phone}</p>
+                                    <p style={{ marginLeft: "10px" }}><b>M.Naqash Bantva</b></p>
+                                    <p style={{ marginLeft: "20px" }}>0331-4441242</p>
+                                    <p style={{ marginLeft: "20px" }}>0321-2610765</p>
+                                    <p style={{ marginLeft: "10px" }}><b>M.Bilal Sultani</b></p>
+                                    <p style={{ marginLeft: "20px" }}>0321-2173277</p>
+                                    <p style={{ marginLeft: "20px" }}>0313-2697337</p>
+                                    <button className="btn" onClick={() => this.props.history.push("/contact")}>More Details</button>
+                                    <img src={logo} width="100%" height="40px" alt="Logo" />
                                 </div>
                             })
                         })}

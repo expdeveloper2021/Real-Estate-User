@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom'
 
 class NavBar extends Component {
+
     render() {
         return (
             <nav className="navbar navbar-inverse navbar-fixed-top">
@@ -13,11 +14,12 @@ class NavBar extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <Link className="navbar-brand" to="/" style={{ fontSize: "20px" }}>Bantva Real Estate</Link>
+                        <Link className="navbar-brand" to="/" style={{fontSize: 20}}>Bantva Real Estate</Link>
                     </div>
                     <div className="collapse navbar-collapse" id="myNavbar">
                          <ul className="nav navbar-nav">
-                            <li className="active" ><Link to="/delete">Properties</Link></li>
+                            <li className={this.props.active}><Link to="/">Properties</Link></li>
+                            <li className={this.props.active1}><Link to="/contact">Contact</Link></li>
                         </ul>
                     </div>
                 </div>

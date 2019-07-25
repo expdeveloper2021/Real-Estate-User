@@ -1,0 +1,20 @@
+.contact {
+    width: 80%;
+    height: auto;
+    background-color: white !important;
+    box-shadow: 3px 3px 6px 6px rgb(179, 177, 177);
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#myCarousel {
+    background-color: #edbcf7;
+}
+
+@media only screen and (max-width: 700px) {
+    #uniq {
+        width: 50% !important;
+    }
+}
