@@ -57,7 +57,7 @@ class All extends Component {
     render() {
         return (
             <div>
-                <NavBar active="active" active1="" />
+                <NavBar active="active" active1="" active2="" />
                 <div className="uniq"></div>
                 <div className="delete">
                     <h1>Properties</h1>

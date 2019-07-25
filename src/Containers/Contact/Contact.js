@@ -11,7 +11,7 @@ class Contact extends Component {
     render() {
         return (
             <div>
-                <Navbar active="" active1="active" />
+                <Navbar active="" active1="active" active2="" />
                 <div className="contact">
                     <h1>Our Contact</h1>
                     <div id="myCarousel" className="carousel slide" data-ride="carousel" style={{marginTop: "30px"}}>

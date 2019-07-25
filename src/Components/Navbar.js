@@ -20,6 +20,7 @@ class NavBar extends Component {
                          <ul className="nav navbar-nav">
                             <li className={this.props.active}><Link to="/">Properties</Link></li>
                             <li className={this.props.active1}><Link to="/contact">Contact</Link></li>
+                            <li className={this.props.active2}><Link to="/credit">Credit</Link></li>
                         </ul>
                     </div>
                 </div>

@@ -1,0 +1,17 @@
+.contacts {
+    width: 80%;
+    height: 600px;
+    background-color: white !important;
+    box-shadow: 3px 3px 6px 6px rgb(179, 177, 177);
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 700px) {
+    .contacts {
+        width: 100%;
+        margin-top: 80px !important;
+    }
+}
