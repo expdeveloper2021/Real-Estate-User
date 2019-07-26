@@ -104,6 +104,8 @@ class All extends Component {
                                     <p style={{ marginLeft: "10px" }}><b>M.Bilal Sultani</b></p>
                                     <p style={{ marginLeft: "20px" }}>0321-2173277</p>
                                     <p style={{ marginLeft: "20px" }}>0313-2697337</p>
+                                    <p style={{ marginLeft: "10px" }}><b>Email</b></p>
+                                    <p style={{ marginLeft: "20px" }}>bantvarealestate@gmail.com</p>
                                     <button className="btn" onClick={() => this.props.history.push("/contact")}>More Details</button>
                                     <img src={logo} width="100%" height="40px" alt="Logo" />
                                 </div>

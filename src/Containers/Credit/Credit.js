@@ -17,8 +17,6 @@ class Credit extends Component {
                     <label>Mobile App Designer</label>
                     <br />
                     <label>Graphic Designer</label>
-                    <br />
-                    <label>Web Designer</label>
                     <hr />
                     <h3><b>Number</b></h3>
                     <label>0305-2723867</label>
