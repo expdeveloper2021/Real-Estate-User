@@ -35,7 +35,7 @@ class Contact extends Component {
                             <span className="sr-only">Next</span>
                         </a>
                     </div>
-                    <div id="myCarousel" className="carousel slide" data-ride="carousel" style={{marginTop: "30px"}}>
+                    <div id="yourCrousel" className="carousel slide" data-ride="carousel" style={{marginTop: "30px"}}>
                         <div className="carousel-inner" id="uniq" style={{ width: "25%", margin: "0px auto" }}>
                             <div className="item active"> 
                                 <img src={contact2} alt="Contact" />
@@ -47,11 +47,11 @@ class Contact extends Component {
                                 <img src={contact3} alt="Contact" />
                             </div>
                         </div>
-                        <a className="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <a className="left carousel-control" href="#yourCrousel" data-slide="prev">
                             <span className="glyphicon glyphicon-chevron-left"></span>
                             <span className="sr-only">Previous</span>
                         </a>
-                        <a className="right carousel-control" href="#myCarousel" data-slide="next">
+                        <a className="right carousel-control" href="#yourCrousel" data-slide="next">
                             <span className="glyphicon glyphicon-chevron-right"></span>
                             <span className="sr-only">Next</span>
                         </a>
