@@ -13,12 +13,13 @@ class All extends Component {
             condit: false,
             active: "active",
             active1: "",
+            active2: "",
             selected: "For Sale",
         }
     }
 
     componentDidMount() {
-        this.setState({ allData: [], active: "active", active1: "", condit: true })
+        this.setState({ allData: [], active: "active", active1: "", active2: "", condit: true })
         firebase.database().ref("allProperties/For Sale").on("child_added", (data) => {
             let allData = this.state.allData
             let arr = []
@@ -29,7 +30,7 @@ class All extends Component {
     }
 
     sale() {
-        this.setState({ allData: [], active: "active", active1: "", condit: true })
+        this.setState({ allData: [], active: "active", active1: "", active2: "", condit: true })
         setTimeout(() => {
             firebase.database().ref("allProperties/For Sale").on("child_added", (data) => {
                 let allData = this.state.allData
@@ -42,9 +43,22 @@ class All extends Component {
     }
 
     rent() {
-        this.setState({ allData: [], active: "", active1: "active", condit: true })
+        this.setState({ allData: [], active: "", active1: "", active2: "active", condit: true })
         setTimeout(() => {
             firebase.database().ref("allProperties/Rent").on("child_added", (data) => {
+                let allData = this.state.allData
+                let arr = []
+                arr.push(data.val())
+                allData.push(arr)
+                this.setState({ allData, condit: false, selected: "Rent" })
+            })
+        }, 3000);
+    }
+
+    investment() {
+        this.setState({ allData: [], active: "", active1: "active", condit: true })
+        setTimeout(() => {
+            firebase.database().ref("allProperties/Investment").on("child_added", (data) => {
                 let allData = this.state.allData
                 let arr = []
                 arr.push(data.val())
@@ -64,6 +78,7 @@ class All extends Component {
                     <ul className="nav nav-tabs">
                         <li className={this.state.active} onClick={this.sale.bind(this)}><a href="Javascript:void(0)">Sale</a></li>
                         <li className={this.state.active1} onClick={this.rent.bind(this)}><a href="Javascript:void(0)">Rent</a></li>
+                        <li className={this.state.active2} onClick={this.investment.bind(this)}><a href="Javascript:void(0)">Rent</a></li>
                     </ul>
                     {!!this.state.condit && <div className="lds-ring"><div></div><div></div><div></div><div></div></div>}
                     <div className="main" >
