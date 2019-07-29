@@ -56,7 +56,7 @@ class All extends Component {
     }
 
     investment() {
-        this.setState({ allData: [],active: "" , active1: "", active2: "active", condit: true })
+        this.setState({ allData: [], active: "", active1: "", active2: "active", condit: true })
         setTimeout(() => {
             firebase.database().ref("allProperties/Investment").on("child_added", (data) => {
                 let allData = this.state.allData
@@ -98,14 +98,16 @@ class All extends Component {
                                                 </div>
                                             })}
                                         </div>
-                                        <a className="left carousel-control" href={"#" + f.push} data-slide="prev">
-                                            <span className="glyphicon glyphicon-chevron-left"></span>
-                                            <span className="sr-only">Previous</span>
-                                        </a>
-                                        <a className="right carousel-control" href={"#" + f.push} data-slide="next">
-                                            <span className="glyphicon glyphicon-chevron-right"></span>
-                                            <span className="sr-only">Next</span>
-                                        </a>
+                                        {f.images.length > 1 && <>
+                                            <a className="left carousel-control" href={"#" + f.push} data-slide="prev">
+                                                <span className="glyphicon glyphicon-chevron-left"></span>
+                                                <span className="sr-only">Previous</span>
+                                            </a>
+                                            <a className="right carousel-control" href={"#" + f.push} data-slide="next">
+                                                <span className="glyphicon glyphicon-chevron-right"></span>
+                                                <span className="sr-only">Next</span>
+                                            </a>
+                                        </>}
                                     </div>
                                     <p className="price">PKR <b style={{ fontSize: "25px" }}>{f.demand}</b></p>
                                     <hr />
